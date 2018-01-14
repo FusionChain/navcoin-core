@@ -24,7 +24,7 @@ static size_t CurlWriteResponse(void *contents, size_t size, size_t nmemb, void 
   return size * nmemb;
 }
 
-UniValue Navtech::CreateAnonTransaction(string address, CAmount nValue, int nTransactions) {
+UniValue Softnode::CreateAnonTransaction(string address, CAmount nValue, int nTransactions) {
 
   vector<anonServer> anonServers = this->GetAnonServers();
   UniValue serverData = this->FindAnonServer(anonServers, nValue, nTransactions);
@@ -50,7 +50,7 @@ UniValue Navtech::CreateAnonTransaction(string address, CAmount nValue, int nTra
 
 }
 
-vector<anonServer> Navtech::GetAnonServers() {
+vector<anonServer> Softnode::GetAnonServers() {
 
   vector<anonServer> returnServers;
 
@@ -100,7 +100,7 @@ vector<anonServer> Navtech::GetAnonServers() {
   return returnServers;
 }
 
-UniValue Navtech::FindAnonServer(std::vector<anonServer> anonServers, CAmount nValue, int nTransactions) {
+UniValue Softnode::FindAnonServer(std::vector<anonServer> anonServers, CAmount nValue, int nTransactions) {
   if (anonServers.size() < 1) {
       throw runtime_error("None of your configured SOFTNode nodes are available right now.");
   }
@@ -176,7 +176,7 @@ UniValue Navtech::FindAnonServer(std::vector<anonServer> anonServers, CAmount nV
   }
 }
 
-UniValue Navtech::ParseJSONResponse(string readBuffer) {
+UniValue Softnode::ParseJSONResponse(string readBuffer) {
   try {
       UniValue valRequest;
       if (!valRequest.read(readBuffer))
@@ -197,7 +197,7 @@ UniValue Navtech::ParseJSONResponse(string readBuffer) {
   }
 }
 
-string Navtech::EncryptAddress(string address, string pubKeyStr, int nTransactions, int nPiece, long nId) {
+string Softnode::EncryptAddress(string address, string pubKeyStr, int nTransactions, int nPiece, long nId) {
 
   address = "{\"n\":\""+address+"\",\"t\":"+std::to_string(GetArg("anon_out_delay",SOFTNODE_DEFAULT_OUT_DELAY))+",\"p\":"+std::to_string(nPiece)+",\"o\":"+std::to_string(nTransactions)+",\"u\":"+std::to_string(nId)+"}";
 
@@ -222,7 +222,7 @@ string Navtech::EncryptAddress(string address, string pubKeyStr, int nTransactio
   }
 }
 
-int Navtech::PublicEncrypt(unsigned char* data, int data_len, unsigned char* key, unsigned char* encrypted)
+int Softnode::PublicEncrypt(unsigned char* data, int data_len, unsigned char* key, unsigned char* encrypted)
 {
     RSA * rsa = this->CreateRSA(key,1);
     if(rsa == NULL || rsa == 0)
@@ -231,7 +231,7 @@ int Navtech::PublicEncrypt(unsigned char* data, int data_len, unsigned char* key
     return result;
 }
 
-RSA * Navtech::CreateRSA(unsigned char * key,int isPublic)
+RSA * Softnode::CreateRSA(unsigned char * key,int isPublic)
 {
     RSA *rsa= NULL;
     BIO *keybio ;
@@ -257,7 +257,7 @@ RSA * Navtech::CreateRSA(unsigned char * key,int isPublic)
     return rsa;
 }
 
-bool Navtech::TestEncryption(string encrypted, UniValue serverData) {
+bool Softnode::TestEncryption(string encrypted, UniValue serverData) {
 
   UniValue server = find_value(serverData, "server");
   UniValue port = find_value(serverData, "server_port");
@@ -306,7 +306,7 @@ bool Navtech::TestEncryption(string encrypted, UniValue serverData) {
   throw runtime_error("TestEncryption End of Function");
 }
 
-UniValue Navtech::GetServerInfo(std::string server) {
+UniValue Softnode::GetServerInfo(std::string server) {
   curl_global_init(CURL_GLOBAL_ALL);
   curl = curl_easy_init();
   string readBuffer;

@@ -22,12 +22,12 @@ private:
     Ui::softnodesetup *ui;
 
 public Q_SLOTS:
-    void reloadNavtechServers();
-    void addNavtechServer();
-    void removeNavtechServer();
-    void getinfoNavtechServer();
+    void reloadSoftnodeServers();
+    void addSoftnodeServer();
+    void removeSoftnodeServer();
+    void getinfoSoftnodeServer();
     void showButtons(bool show=true);
-    void showNavtechIntro();
+    void showSoftnodeIntro();
 
 };
 

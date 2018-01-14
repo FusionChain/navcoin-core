@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NavTechInit</class>
- <widget class="QDialog" name="NavTechInit">
+ <class>SoftNodeInit</class>
+ <widget class="QDialog" name="SoftNodeInit">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>NavTech Setup</string>
+   <string>SoftNode Setup</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -40,7 +40,7 @@
        <bool>false</bool>
       </property>
       <property name="text">
-       <string>SoftCoin uses an unique parallel cluster of nodes called NavTech to protect the privacy of your transactions.</string>
+       <string>SoftCoin uses an unique parallel cluster of nodes called SoftNode to protect the privacy of your transactions.</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -136,7 +136,7 @@
   <connection>
    <sender>buttonBox_2</sender>
    <signal>accepted()</signal>
-   <receiver>NavTechInit</receiver>
+   <receiver>SoftNodeInit</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

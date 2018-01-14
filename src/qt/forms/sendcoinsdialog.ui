@@ -741,7 +741,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="noNavtechLabel">
+        <widget class="QLabel" name="noSoftnodeLabel">
          <property name="font">
           <font>
            <pointsize>11</pointsize>
@@ -892,7 +892,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="noNavtechButton">
+           <widget class="QPushButton" name="noSoftnodeButton">
             <property name="font">
              <font>
               <pointsize>11</pointsize>

@@ -59,7 +59,7 @@
        </size>
       </property>
       <property name="text">
-       <string>List of Navtech servers currently configured in your wallet to process private payments:</string>
+       <string>List of Softnode servers currently configured in your wallet to process private payments:</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>

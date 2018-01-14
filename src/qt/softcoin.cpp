@@ -612,8 +612,8 @@ int main(int argc, char *argv[])
 
     if(GetArg("-firstrun","0") == "1")
     {
-        softnodesetup* setupNavTech = new softnodesetup();
-        setupNavTech->showNavtechIntro();
+        softnodesetup* setupSoftNode = new softnodesetup();
+        setupSoftNode->showSoftnodeIntro();
     }
 
     /// 7. Determine network (and switch to network specific options)

@@ -22,15 +22,15 @@ softnodesetup::softnodesetup(QWidget *parent) :
 
     ui->saveButton->setVisible(false);
 
-    this->setWindowTitle("Navtech");
+    this->setWindowTitle("Softnode");
 
-    connect(ui->addNewButton,SIGNAL(clicked()),this,SLOT(addNavtechServer()));
-    connect(ui->getInfoButton,SIGNAL(clicked()),this,SLOT(getinfoNavtechServer()));
-    connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeNavtechServer()));
+    connect(ui->addNewButton,SIGNAL(clicked()),this,SLOT(addSoftnodeServer()));
+    connect(ui->getInfoButton,SIGNAL(clicked()),this,SLOT(getinfoSoftnodeServer()));
+    connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeSoftnodeServer()));
     connect(ui->serversListWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(showButtons()));
     connect(ui->saveButton,SIGNAL(clicked()),this,SLOT(close()));
 
-    reloadNavtechServers();
+    reloadSoftnodeServers();
 }
 
 softnodesetup::~softnodesetup()
@@ -38,7 +38,7 @@ softnodesetup::~softnodesetup()
     delete ui;
 }
 
-void softnodesetup::addNavtechServer()
+void softnodesetup::addSoftnodeServer()
 {
     QString serverToAdd = ui->addServerText->text();
 
@@ -59,10 +59,10 @@ void softnodesetup::addNavtechServer()
 
     ui->addServerText->clear();
 
-    reloadNavtechServers();
+    reloadSoftnodeServers();
 }
 
-void softnodesetup::reloadNavtechServers()
+void softnodesetup::reloadSoftnodeServers()
 {
     ui->serversListWidget->clear();
 
@@ -77,7 +77,7 @@ void softnodesetup::reloadNavtechServers()
     }
 }
 
-void softnodesetup::showNavtechIntro()
+void softnodesetup::showSoftnodeIntro()
 {
     setWindowIcon(QIcon(":icons/softcoin"));
     setStyleSheet(Skinize());
@@ -87,15 +87,15 @@ void softnodesetup::showNavtechIntro()
     exec();
 }
 
-void softnodesetup::removeNavtechServer()
+void softnodesetup::removeSoftnodeServer()
 {
     QString serverToRemove = ui->serversListWidget->currentItem()->text();
 
     if(serverToRemove == "")
         return;
 
-    QMessageBox::StandardButton btnRetVal = QMessageBox::question(this, tr("Remove Navtech server"),
-        tr("You are about to remove the following Navtech server: ") + "<br><br>" + serverToRemove + "<br><br>" + tr("Are you sure?"),
+    QMessageBox::StandardButton btnRetVal = QMessageBox::question(this, tr("Remove Softnode server"),
+        tr("You are about to remove the following Softnode server: ") + "<br><br>" + serverToRemove + "<br><br>" + tr("Are you sure?"),
         QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel);
 
     if(btnRetVal == QMessageBox::Cancel)
@@ -118,7 +118,7 @@ void softnodesetup::removeNavtechServer()
     }
 
     showButtons(false);
-    reloadNavtechServers();
+    reloadSoftnodeServers();
 }
 
 void softnodesetup::showButtons(bool show)
@@ -127,7 +127,7 @@ void softnodesetup::showButtons(bool show)
     ui->removeButton->setVisible(show);
 }
 
-void softnodesetup::getinfoNavtechServer()
+void softnodesetup::getinfoSoftnodeServer()
 {
     QString serverToCheck = ui->serversListWidget->currentItem()->text();
 
@@ -140,16 +140,16 @@ void softnodesetup::getinfoNavtechServer()
         return;
 
     try {
-        Navtech *softnode = new Navtech();
+        Softnode *softnode = new Softnode();
         UniValue data = softnode->GetServerInfo(serverToCheck.toStdString());
 
         QMessageBox::information(this, windowTitle(),
-            tr("Navtech server") + "<br><br>" +  tr("Address: ") + serverToCheck + "<br>" + tr("Min amount: ") + QString::number(data["min_amount"].get_real()) + " <br>" + tr("Max amount: ") + QString::number(data["max_amount"].get_real()) + "<br>" + tr("Tx fee: ") + QString::number(data["transaction_fee"].get_real()) + "%",
+            tr("Softnode server") + "<br><br>" +  tr("Address: ") + serverToCheck + "<br>" + tr("Min amount: ") + QString::number(data["min_amount"].get_real()) + " <br>" + tr("Max amount: ") + QString::number(data["max_amount"].get_real()) + "<br>" + tr("Tx fee: ") + QString::number(data["transaction_fee"].get_real()) + "%",
             QMessageBox::Ok, QMessageBox::Ok);
     }
     catch(const std::runtime_error &e)
     {
-        QMessageBox::warning(this, tr("Navtech server"),
+        QMessageBox::warning(this, tr("Softnode server"),
                              "<qt>Could not get info:<br/><br/>" +
                              tr(e.what())+"</qt>");
     }

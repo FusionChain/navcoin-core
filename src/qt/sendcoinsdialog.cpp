@@ -57,7 +57,7 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *platformStyle, QWidget *pa
 
     // Coin Control
     connect(ui->pushButtonCoinControl, SIGNAL(clicked()), this, SLOT(coinControlButtonClicked()));
-    connect(ui->noNavtechButton, SIGNAL(clicked()), this, SLOT(showNavTechDialog()));
+    connect(ui->noSoftnodeButton, SIGNAL(clicked()), this, SLOT(showSoftNodeDialog()));
     connect(ui->checkBoxCoinControlChange, SIGNAL(stateChanged(int)), this, SLOT(coinControlChangeChecked(int)));
     connect(ui->lineEditCoinControlChange, SIGNAL(textEdited(const QString &)), this, SLOT(coinControlChangeEdited(const QString &)));
 
@@ -122,7 +122,7 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *platformStyle, QWidget *pa
     minimizeFeeSection(settings.value("fFeeSectionMinimized").toBool());
     ui->anonsendCheckbox->setChecked(settings.value("fAnonSend").toBool());
 
-    checkNavtechServers();
+    checkSoftnodeServers();
 }
 
 void SendCoinsDialog::anonsendCheckboxClick()
@@ -132,11 +132,11 @@ void SendCoinsDialog::anonsendCheckboxClick()
     settings.setValue("fAnonSend", ui->anonsendCheckbox->isChecked());
 }
 
-void SendCoinsDialog::checkNavtechServers()
+void SendCoinsDialog::checkSoftnodeServers()
 {
     bool notEnoughServers = vAddedAnonServers.size() < 1 && mapMultiArgs["-addanonserver"].size() < 1;
 
-    ui->noNavtechLabel->setVisible(notEnoughServers);
+    ui->noSoftnodeLabel->setVisible(notEnoughServers);
     ui->anonsendCheckbox->setVisible(!notEnoughServers);
     if(notEnoughServers)
       ui->anonsendCheckbox->setChecked(false);
@@ -238,15 +238,15 @@ void SendCoinsDialog::on_sendButton_clicked()
             if(ui->anonsendCheckbox->checkState() != 0) {
                 try
                 {
-                    Navtech softnode;
+                    Softnode softnode;
 
                     UniValue softnodeData = softnode.CreateAnonTransaction(recipient.address.toStdString() , recipient.amount / (nTransactions * 2), nTransactions);
 
                     UniValue pubKey = find_value(softnodeData, "public_key");
 
-                    std::vector<UniValue> serverNavAddresses(find_value(softnodeData, "anonaddress").getValues());
+                    std::vector<UniValue> serverSoftAddresses(find_value(softnodeData, "anonaddress").getValues());
 
-                    if(serverNavAddresses.size() != nTransactions)
+                    if(serverSoftAddresses.size() != nTransactions)
                     {
                         QMessageBox::warning(this, tr("Private payment"),
                                          "<qt>" +
@@ -254,10 +254,10 @@ void SendCoinsDialog::on_sendButton_clicked()
                         valid = false;
                     }
 
-                    for(unsigned int i = 0; i < serverNavAddresses.size(); i++)
+                    for(unsigned int i = 0; i < serverSoftAddresses.size(); i++)
                     {
-                        CSoftCoinAddress serverNavAddress(serverNavAddresses[i].get_str());
-                        if (!serverNavAddress.IsValid())
+                        CSoftCoinAddress serverSoftAddress(serverSoftAddresses[i].get_str());
+                        if (!serverSoftAddress.IsValid())
                         {
 
                             valid = false;
@@ -271,17 +271,17 @@ void SendCoinsDialog::on_sendButton_clicked()
                       CAmount nAmountAlreadyProcessed = 0;
                       CAmount nMinAmount = find_value(softnodeData, "min_amount").get_int() * COIN;
 
-                      for(unsigned int i = 0; i < serverNavAddresses.size(); i++)
+                      for(unsigned int i = 0; i < serverSoftAddresses.size(); i++)
                       {
                           SendCoinsRecipient cRecipient = recipient;
-                          cRecipient.destaddress = QString::fromStdString(serverNavAddresses[i].get_str());
+                          cRecipient.destaddress = QString::fromStdString(serverSoftAddresses[i].get_str());
                           CAmount nAmountRound = 0;
                           CAmount nAmountNotProcessed = nAmount - nAmountAlreadyProcessed;
                           CAmount nAmountToSubstract = ((nAmountNotProcessed / ((rand() % nEntropy)+2))/1000)*1000;
-                          if(i == serverNavAddresses.size() - 1 || (nAmountNotProcessed - nAmountToSubstract) < (nMinAmount + 0.001))
+                          if(i == serverSoftAddresses.size() - 1 || (nAmountNotProcessed - nAmountToSubstract) < (nMinAmount + 0.001))
                           {
                               nAmountRound = nAmountNotProcessed;
-                              i = serverNavAddresses.size();
+                              i = serverSoftAddresses.size();
                           }
                           else
                           {
@@ -290,7 +290,7 @@ void SendCoinsDialog::on_sendButton_clicked()
 
 
                           nAmountAlreadyProcessed += nAmountRound;
-                          cRecipient.anondestination = QString::fromStdString(softnode.EncryptAddress(recipient.address.toStdString(), pubKey.get_str(), nTransactions, i+(i==serverNavAddresses.size()?0:1), nId));
+                          cRecipient.anondestination = QString::fromStdString(softnode.EncryptAddress(recipient.address.toStdString(), pubKey.get_str(), nTransactions, i+(i==serverSoftAddresses.size()?0:1), nId));
                           if(!find_value(softnodeData, "anonfee").isNull()){
                               cRecipient.anonfee = nAmountRound * ((float)find_value(softnodeData, "anonfee").get_real() / 100.0);
                               cRecipient.transaction_fee = find_value(softnodeData, "anonfee").get_real();
@@ -460,9 +460,9 @@ void SendCoinsDialog::on_sendButton_clicked()
             }
 
             if(rcp.isanon){
-                questionString.append("<br>" + tr("Navtech server fee:") +QString(" ")+ QString::number(rcp.transaction_fee) + "% "+ tr(rcp.fSubtractFeeFromAmount ? "" : "(already included)") + "<br>");
+                questionString.append("<br>" + tr("Softnode server fee:") +QString(" ")+ QString::number(rcp.transaction_fee) + "% "+ tr(rcp.fSubtractFeeFromAmount ? "" : "(already included)") + "<br>");
                 if(rcp.fSubtractFeeFromAmount)
-                    questionString.append("<span style='color:#aa0000;'>" + SoftCoinUnits::formatHtmlWithUnit(model->getOptionsModel()->getDisplayUnit(), nTotalAmount * ((rcp.transaction_fee/100))) + "</span> " + tr("will be deducted as Navtech fee.") + "<br>");
+                    questionString.append("<span style='color:#aa0000;'>" + SoftCoinUnits::formatHtmlWithUnit(model->getOptionsModel()->getDisplayUnit(), nTotalAmount * ((rcp.transaction_fee/100))) + "</span> " + tr("will be deducted as Softnode fee.") + "<br>");
 
             }
 
@@ -529,15 +529,15 @@ void SendCoinsDialog::clear()
     updateTabsAndLabels();
 }
 
-void SendCoinsDialog::showNavTechDialog()
+void SendCoinsDialog::showSoftNodeDialog()
 {
-    softnodesetup* setupNavTech = new softnodesetup();
-    setupNavTech->setWindowIcon(QIcon(":icons/softcoin"));
-    setupNavTech->setStyleSheet(Skinize());
+    softnodesetup* setupSoftNode = new softnodesetup();
+    setupSoftNode->setWindowIcon(QIcon(":icons/softcoin"));
+    setupSoftNode->setStyleSheet(Skinize());
 
-    setupNavTech->exec();
+    setupSoftNode->exec();
 
-    checkNavtechServers();
+    checkSoftnodeServers();
 }
 
 void SendCoinsDialog::reject()
@@ -752,13 +752,13 @@ void SendCoinsDialog::minimizeFeeSection(bool fMinimize)
     ui->sendButton       ->setVisible(fMinimize);
     ui->label            ->setVisible(fMinimize);
     ui->labelBalance     ->setVisible(fMinimize);
-    ui->noNavtechButton  ->setVisible(fMinimize);
+    ui->noSoftnodeButton  ->setVisible(fMinimize);
     //ui->horizontalLayoutSmartFee->setContentsMargins(0, (fMinimize ? 0 : 6), 0, 0);
 
     if(fMinimize)
-        checkNavtechServers();
+        checkSoftnodeServers();
     else
-        ui->noNavtechLabel  ->setVisible(false);
+        ui->noSoftnodeLabel  ->setVisible(false);
         ui->anonsendCheckbox->setVisible(false);
 
 

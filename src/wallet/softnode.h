@@ -36,11 +36,11 @@ struct anonServer {
 };
 
 struct softnodeData {
-    std::string serverNavAddress;
+    std::string serverSoftAddress;
     std::string anonDestination;
 };
 
-class Navtech
+class Softnode
 {
 public:
     UniValue CreateAnonTransaction(std::string address, CAmount nValue = -1, int nTransactions = 1);

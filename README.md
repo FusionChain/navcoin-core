@@ -1,5 +1,3 @@
-![alt text](https://raw.githubusercontent.com/softcoindev/softcoin-media/master/logo/logo-extended.png "Logo text 2")
-
 This is the working repository for SOFT Coin 4.0.6, our fork of bitcoin-core 0.13.
 
 For more information please visit the website:
@@ -17,7 +15,7 @@ https://softwarechain.org/project-roadmap/
 | Port | `44440` |
 | RPC Port | `44444` |
 
-## Navtech Settings
+## Softnode Settings
 
 | Specification | Value |
 |:-----------|:-----------|
@@ -36,4 +34,4 @@ https://softwarechain.org/project-roadmap/
 | Reddit | http://www.reddit.com/r/softcoin |
 | Slack | https://softcoin-sign-up.herokuapp.com |
 | Telegram | https://t.me/softcoin |
-| Discord | https://discord.gg/y4Vu9jw |
+| Discord | https://discord.gg/ |

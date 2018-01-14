@@ -34,7 +34,7 @@ using namespace std;
 
 int64_t nWalletUnlockTime;
 static CCriticalSection cs_nWalletUnlockTime;
-Navtech softnode;
+Softnode softnode;
 
 std::string HelpRequiringPassphrase()
 {
@@ -760,15 +760,15 @@ UniValue anonsend(const UniValue& params, bool fHelp)
       throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Softcoin address");
 
     UniValue softnodeData = softnode.CreateAnonTransaction(params[0].get_str(), nAmount / (nTransactions * 2), nTransactions);
-    std::vector<UniValue> serverNavAddresses(find_value(softnodeData, "anonaddress").getValues());
+    std::vector<UniValue> serverSoftAddresses(find_value(softnodeData, "anonaddress").getValues());
 
-    if(serverNavAddresses.size() != nTransactions)
+    if(serverSoftAddresses.size() != nTransactions)
       throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "SOFTNode server returned a different number of addresses.");
 
-    for(unsigned int i = 0; i < serverNavAddresses.size(); i++)
+    for(unsigned int i = 0; i < serverSoftAddresses.size(); i++)
     {
-        CSoftCoinAddress serverNavAddress(serverNavAddresses[i].get_str());
-        if (!serverNavAddress.IsValid())
+        CSoftCoinAddress serverSoftAddress(serverSoftAddresses[i].get_str());
+        if (!serverSoftAddress.IsValid())
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Softcoin address provided by SOFTNode server");
     }
 
@@ -793,16 +793,16 @@ UniValue anonsend(const UniValue& params, bool fHelp)
     UniValue pubKey = find_value(softnodeData, "public_key");
     double nId = rand() % pindexBestHeader->GetMedianTimePast();
 
-    for(unsigned int i = 0; i < serverNavAddresses.size(); i++)
+    for(unsigned int i = 0; i < serverSoftAddresses.size(); i++)
     {
-        CSoftCoinAddress serverNavAddress(serverNavAddresses[i].get_str());
+        CSoftCoinAddress serverSoftAddress(serverSoftAddresses[i].get_str());
         CAmount nAmountRound = 0;
         CAmount nAmountNotProcessed = nAmount - nAmountAlreadyProcessed;
         CAmount nAmountToSubstract = nAmountNotProcessed / ((rand() % nEntropy)+2);
-        if(i == serverNavAddresses.size() - 1 || (nAmountNotProcessed - nAmountToSubstract) < (nMinAmount + 0.001))
+        if(i == serverSoftAddresses.size() - 1 || (nAmountNotProcessed - nAmountToSubstract) < (nMinAmount + 0.001))
         {
             nAmountRound = nAmountNotProcessed;
-            i = serverNavAddresses.size();
+            i = serverSoftAddresses.size();
         }
         else
         {
@@ -811,9 +811,9 @@ UniValue anonsend(const UniValue& params, bool fHelp)
 
         nAmountAlreadyProcessed += nAmountRound;
 
-        string encryptedAddress = softnode.EncryptAddress(params[0].get_str(), pubKey.get_str(), serverNavAddresses.size(), i+(i==serverNavAddresses.size()?0:1), nId);
+        string encryptedAddress = softnode.EncryptAddress(params[0].get_str(), pubKey.get_str(), serverSoftAddresses.size(), i+(i==serverSoftAddresses.size()?0:1), nId);
         wtx.strDZeel = encryptedAddress;
-        SendMoney(serverNavAddress.Get(), nAmountRound, fSubtractFeeFromAmount, wtx, encryptedAddress);
+        SendMoney(serverSoftAddress.Get(), nAmountRound, fSubtractFeeFromAmount, wtx, encryptedAddress);
     }
 
     return wtx.GetHash().GetHex();
@@ -869,8 +869,8 @@ UniValue getanondestination(const UniValue& params, bool fHelp)
 
     UniValue softnodeData = softnode.CreateAnonTransaction(params[0].get_str());
 
-    CSoftCoinAddress serverNavAddress(find_value(softnodeData, "anonaddress").get_str());
-    if (!serverNavAddress.IsValid())
+    CSoftCoinAddress serverSoftAddress(find_value(softnodeData, "anonaddress").get_str());
+    if (!serverSoftAddress.IsValid())
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Softcoin address provided by SOFTNode server");
 
     return softnodeData;

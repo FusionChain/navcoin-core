@@ -10,21 +10,21 @@
 #include <QStringList>
 #include <QUrl>
 
-NavTechInit::NavTechInit(QWidget *parent) :
+SoftNodeInit::SoftNodeInit(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::NavTechInit)
+    ui(new Ui::SoftNodeInit)
 {
     ui->setupUi(this);
 }
 
-NavTechInit::~NavTechInit()
+SoftNodeInit::~SoftNodeInit()
 {
     delete ui;
 }
 
-void NavTechInit::ShowNavtechIntro(bool exitAfter)
+void SoftNodeInit::ShowSoftnodeIntro(bool exitAfter)
 {
-    NavTechInit softnodeinit;
+    SoftNodeInit softnodeinit;
     softnodeinit.setWindowIcon(QIcon(":icons/softcoin"));
     softnodeinit.setStyleSheet(Skinize());
 
@@ -49,7 +49,7 @@ void NavTechInit::ShowNavtechIntro(bool exitAfter)
     }
 }
 
-QString NavTechInit::GetServers()
+QString SoftNodeInit::GetServers()
 {
     return ui->plainTextEdit->toPlainText();
 }
