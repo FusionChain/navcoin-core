@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_COMPAT_BYTESWAP_H
-#define NAVCOIN_COMPAT_BYTESWAP_H
+#ifndef SOFTCOIN_COMPAT_BYTESWAP_H
+#define SOFTCOIN_COMPAT_BYTESWAP_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/navcoin-config.h"
+#include "config/softcoin-config.h"
 #endif
 
 #include <stdint.h>
@@ -44,4 +44,4 @@ inline uint64_t bswap_64(uint64_t x)
 }
 #endif // HAVE_DECL_BSWAP64
 
-#endif // NAVCOIN_COMPAT_BYTESWAP_H
+#endif // SOFTCOIN_COMPAT_BYTESWAP_H

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SoftCoin
+Comment=SoftCoin P2P Cryptocurrency
+Comment[fr]=SoftCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SoftCoin, eşten eşe kriptografik sanal para birimi
+Exec=softcoin-qt %u
+Terminal=false
+Type=Application
+Icon=softcoin128
+MimeType=x-scheme-handler/softcoin;
+Categories=Office;Finance;

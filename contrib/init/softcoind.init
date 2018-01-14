@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  softcoind The softcoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: softcoind
+# processname: softcoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/softcoind, see below
+if [ -f /etc/sysconfig/softcoind ]; then
+        . /etc/sysconfig/softcoind
+fi
+
+RETVAL=0
+
+prog=softcoind
+# you can override the lockfile via SOFTCOIND_LOCKFILE in /etc/sysconfig/softcoind
+lockfile=${SOFTCOIND_LOCKFILE-/var/lock/subsys/softcoind}
+
+# softcoind defaults to /usr/bin/softcoind, override with SOFTCOIND_BIN
+softcoind=${SOFTCOIND_BIN-/usr/bin/softcoind}
+
+# softcoind opts default to -disablewallet, override with SOFTCOIND_OPTS
+softcoind_opts=${SOFTCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $softcoind $softcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

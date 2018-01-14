@@ -4,8 +4,8 @@
 //
 // C++ wrapper around ctaes, a constant-time AES implementation
 
-#ifndef NAVCOIN_CRYPTO_AES_H
-#define NAVCOIN_CRYPTO_AES_H
+#ifndef SOFTCOIN_CRYPTO_AES_H
+#define SOFTCOIN_CRYPTO_AES_H
 
 extern "C" {
 #include "crypto/ctaes/ctaes.h"
@@ -115,4 +115,4 @@ private:
     unsigned char iv[AES_BLOCKSIZE];
 };
 
-#endif // NAVCOIN_CRYPTO_AES_H
+#endif // SOFTCOIN_CRYPTO_AES_H

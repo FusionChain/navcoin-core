@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_UINT256_H
-#define NAVCOIN_UINT256_H
+#ifndef SOFTCOIN_UINT256_H
+#define SOFTCOIN_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -226,4 +226,4 @@ inline uint256 uint256S(const std::string& str)
 }
 uint256 Uint512ToUint256(const uint512 &a);
 
-#endif // NAVCOIN_UINT256_H
+#endif // SOFTCOIN_UINT256_H

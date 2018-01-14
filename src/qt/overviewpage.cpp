@@ -6,7 +6,7 @@
 #include "ui_overviewpage.h"
 #include "skinize.h"
 
-#include "navcoinunits.h"
+#include "softcoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -31,7 +31,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle):
-        QAbstractItemDelegate(), unit(NavCoinUnits::NAV),
+        QAbstractItemDelegate(), unit(SoftCoinUnits::SOFT),
         platformStyle(platformStyle)
     {
 
@@ -85,7 +85,7 @@ public:
             foreground = COLOR_POSITIVE;
         }
         painter->setPen(foreground);
-        QString amountText = NavCoinUnits::formatWithUnit(unit, amount, true, NavCoinUnits::separatorAlways);
+        QString amountText = SoftCoinUnits::formatWithUnit(unit, amount, true, SoftCoinUnits::separatorAlways);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -183,11 +183,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchOnlyBalance = watchOnlyBalance;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
-    ui->labelBalance->setText(NavCoinUnits::formatWithUnit(unit, balance, false, NavCoinUnits::separatorAlways));
-    ui->labelUnconfirmed->setText(NavCoinUnits::formatWithUnit(unit, unconfirmedBalance, false, NavCoinUnits::separatorAlways));
-    ui->labelStaking->setText(NavCoinUnits::formatWithUnit(unit, stakingBalance, false, NavCoinUnits::separatorAlways));
-    ui->labelImmature->setText(NavCoinUnits::formatWithUnit(unit, immatureBalance, false, NavCoinUnits::separatorAlways));
-    ui->labelTotal->setText(NavCoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + stakingBalance, false, NavCoinUnits::separatorAlways));
+    ui->labelBalance->setText(SoftCoinUnits::formatWithUnit(unit, balance, false, SoftCoinUnits::separatorAlways));
+    ui->labelUnconfirmed->setText(SoftCoinUnits::formatWithUnit(unit, unconfirmedBalance, false, SoftCoinUnits::separatorAlways));
+    ui->labelStaking->setText(SoftCoinUnits::formatWithUnit(unit, stakingBalance, false, SoftCoinUnits::separatorAlways));
+    ui->labelImmature->setText(SoftCoinUnits::formatWithUnit(unit, immatureBalance, false, SoftCoinUnits::separatorAlways));
+    ui->labelTotal->setText(SoftCoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + stakingBalance, false, SoftCoinUnits::separatorAlways));
 
     bool showStaking = stakingBalance != 0;
 
@@ -285,7 +285,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("NAV")
+    // update the display unit, to not use the default ("SOFT")
     updateDisplayUnit();
 }
 
@@ -377,9 +377,9 @@ void OverviewPage::updateStakeReport(bool fImmediate=false)
 
     int unit = walletModel->getOptionsModel()->getDisplayUnit();
 
-    ui->label24hStakingStats->setText(NavCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, NavCoinUnits::separatorAlways));
-    ui->label7dStakingStats->setText(NavCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, NavCoinUnits::separatorAlways));
-    ui->label30dStakingStats->setText(NavCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, NavCoinUnits::separatorAlways));
+    ui->label24hStakingStats->setText(SoftCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, SoftCoinUnits::separatorAlways));
+    ui->label7dStakingStats->setText(SoftCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, SoftCoinUnits::separatorAlways));
+    ui->label30dStakingStats->setText(SoftCoinUnits::formatWithUnit(unit, aRange[i++].Total, false, SoftCoinUnits::separatorAlways));
 
 }
 

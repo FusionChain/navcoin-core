@@ -1,0 +1,6 @@
+usr/local/bin/softcoin-qt usr/bin
+share/pixmaps/softcoin32.xpm usr/share/pixmaps
+share/pixmaps/softcoin16.xpm usr/share/pixmaps
+share/pixmaps/softcoin128.png usr/share/pixmaps
+debian/softcoin-qt.desktop usr/share/applications
+debian/softcoin-qt.protocol usr/share/kde4/services/

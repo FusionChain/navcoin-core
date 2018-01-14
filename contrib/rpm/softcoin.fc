@@ -1,0 +1,8 @@
+/usr/bin/softcoin-cli		--	gen_context(system_u:object_r:softcoin_exec_t,s0)
+/usr/sbin/softcoind		--	gen_context(system_u:object_r:softcoin_exec_t,s0)
+/usr/lib(64)?/softcoin/softcoind		--	gen_context(system_u:object_r:softcoin_exec_t,s0)
+
+/etc/softcoin(/.*)?		gen_context(system_u:object_r:softcoin_conf_t,s0)
+/var/lib/softcoin(/.*)?		gen_context(system_u:object_r:softcoin_var_lib_t,s0)
+
+(/var)?/run/softcoind(/.*)?   gen_context(system_u:object_r:softcoin_var_run_t,s0)

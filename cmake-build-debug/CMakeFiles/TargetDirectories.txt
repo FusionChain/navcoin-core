@@ -1,0 +1,3 @@
+/home/carlo/org/software/softcoin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/carlo/org/software/softcoin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/carlo/org/software/softcoin/cmake-build-debug/CMakeFiles/fusion_core.dir

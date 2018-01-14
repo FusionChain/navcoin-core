@@ -1,0 +1,2105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SOFTCoin"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Sql\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Xml\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5LinguistTools\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/carlo/org/software/softcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/carlo/org/software/softcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/carlo/org/software/softcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fusion_core">
+				<Option output="/home/carlo/org/software/softcoin/cmake-build-debug/fusion_core" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/carlo/org/software/softcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DQT_DEBUG"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_THREAD_LIB"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtSql"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtXml"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 fusion_core"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fusion_core/fast">
+				<Option output="/home/carlo/org/software/softcoin/cmake-build-debug/fusion_core" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/carlo/org/software/softcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DQT_DEBUG"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_THREAD_LIB"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtSql"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtXml"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 fusion_core/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carlo/org/software/softcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/carlo/org/software/softcoin/src/addressindex.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/addrman.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/addrman.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/aes_helper.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/amount.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/amount.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/arith_uint256.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/arith_uint256.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/base58.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/base58.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/Examples.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/base58.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/bench.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/bench.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/bench_softcoin.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/crypto_hash.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bench/rollingbloom.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bignum.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/blake.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/blockencodings.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/blockencodings.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bloom.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bloom.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/bmw.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chain.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chain.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chainparams.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chainparams.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chainparamsbase.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chainparamsbase.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/chainparamsseeds.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/checkpoints.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/checkpoints.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/checkqueue.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/clientversion.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/clientversion.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/coincontrol.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/coins.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/coins.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/byteswap.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/endian.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/glibc_compat.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/glibc_sanity.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/glibcxx_sanity.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/sanity.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compat/strnlen.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compressor.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/compressor.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/cfund.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/cfund.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/consensus.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/merkle.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/merkle.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/params.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/consensus/validation.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/core_io.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/core_memusage.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/core_read.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/core_write.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/aes.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/aes.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/common.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ctaes/bench.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ctaes/ctaes.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ctaes/ctaes.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ctaes/test.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/hmac_sha256.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/hmac_sha256.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/hmac_sha512.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/hmac_sha512.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ripemd160.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/ripemd160.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha1.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha1.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha256.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha256.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha512.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/crypto/sha512.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/cubehash.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/dbwrapper.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/dbwrapper.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/echo.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/fugue.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/groestl.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/hamsi.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/hamsi_helper.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/hash.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/hash.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/hashblock.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/httprpc.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/httprpc.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/httpserver.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/httpserver.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/indirectmap.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/init.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/init.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/jh.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/keccak.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/kernel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/kernel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/key.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/key.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/keystore.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/keystore.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/autocompact_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/builder.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/builder.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/c.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/c_test.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/corruption_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_bench.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_impl.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_iter.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_iter.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/db_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/dbformat.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/dbformat.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/dbformat_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/dumpfile.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/filename.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/filename.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/filename_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/leveldb_main.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_format.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_reader.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_reader.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_writer.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/log_writer.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/memtable.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/memtable.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/repair.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/skiplist.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/skiplist_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/snapshot.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/table_cache.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/table_cache.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_edit.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_edit.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_edit_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_set.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_set.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/version_set_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/write_batch.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/write_batch_internal.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/db/write_batch_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/doc/bench/db_bench_sqlite3.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/doc/bench/db_bench_tree_db.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/helpers/memenv/memenv.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/helpers/memenv/memenv.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/helpers/memenv/memenv_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/c.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/cache.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/comparator.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/db.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/dumpfile.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/env.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/filter_policy.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/iterator.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/options.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/slice.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/status.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/table.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/table_builder.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/include/leveldb/write_batch.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/issues/issue178_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/issues/issue200_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/atomic_pointer.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port_example.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port_posix.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port_posix.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port_win.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/port_win.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/thread_annotations.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/port/win/stdint.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/block.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/block.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/block_builder.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/block_builder.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/filter_block.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/filter_block.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/filter_block_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/format.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/format.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/iterator.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/iterator_wrapper.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/merger.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/merger.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/table.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/table_builder.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/table_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/two_level_iterator.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/table/two_level_iterator.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/arena.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/arena.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/arena_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/bloom.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/bloom_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/cache.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/cache_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/coding.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/coding.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/coding_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/comparator.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/crc32c.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/crc32c.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/crc32c_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/env.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/env_posix.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/env_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/env_win.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/filter_policy.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/hash.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/hash.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/hash_test.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/histogram.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/histogram.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/logging.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/logging.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/mutexlock.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/options.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/posix_logger.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/random.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/status.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/testharness.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/testharness.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/testutil.cc">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/leveldb/util/testutil.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/limitedmap.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/luffa.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/main.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/main.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/memusage.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/merkleblock.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/merkleblock.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/miner.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/miner.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/net.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/net.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/netbase.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/netbase.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/noui.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/noui.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/fees.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/fees.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/policy.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/policy.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/rbf.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/policy/rbf.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pos.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pos.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pow.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pow.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/prevector.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/primitives/block.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/primitives/block.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/primitives/transaction.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/primitives/transaction.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/protocol.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/protocol.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pubkey.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/pubkey.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/addressbookpage.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/addressbookpage.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/addresstablemodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/addresstablemodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/askpassphrasedialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/askpassphrasedialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/bantablemodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/bantablemodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/clientmodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/clientmodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/coincontroldialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/coincontroldialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/coincontroltreewidget.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/coincontroltreewidget.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/csvmodelwriter.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/csvmodelwriter.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/editaddressdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/editaddressdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/getaddresstoreceive.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/getaddresstoreceive.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/guiconstants.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/guiutil.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/guiutil.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/intro.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/intro.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/listview.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/macdockiconhandler.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/macnotificationhandler.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/networkstyle.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/networkstyle.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/notificator.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/notificator.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/openuridialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/openuridialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/optionsdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/optionsdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/optionsmodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/optionsmodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/overviewpage.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/overviewpage.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/paymentrequestplus.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/paymentrequestplus.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/paymentserver.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/paymentserver.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/peertablemodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/peertablemodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/platformstyle.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/platformstyle.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/qvalidatedlineedit.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/qvalidatedlineedit.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/qvaluecombobox.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/qvaluecombobox.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/receivecoinsdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/receivecoinsdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/receiverequestdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/receiverequestdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/recentrequeststablemodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/recentrequeststablemodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/rpcconsole.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/rpcconsole.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/sendcoinsdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/sendcoinsdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/sendcoinsentry.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/sendcoinsentry.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/signverifymessagedialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/signverifymessagedialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/skinize.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/skinize.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoin.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinaddressvalidator.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinaddressvalidator.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinamountfield.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinamountfield.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoingui.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoingui.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinstrings.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinunits.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softcoinunits.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodeinit.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodeinit.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodeitem.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodeitem.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodesetup.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/softnodesetup.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/splashscreen.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/splashscreen.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/paymentrequestdata.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/paymentservertests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/paymentservertests.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/test_main.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/uritests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/test/uritests.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/trafficgraphwidget.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/trafficgraphwidget.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiondesc.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiondesc.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiondescdialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiondescdialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionfilterproxy.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionfilterproxy.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionrecord.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionrecord.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiontablemodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactiontablemodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionview.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/transactionview.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/ui_getaddresstoreceive.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/ui_softnodeinit.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/ui_softnodeitem.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/ui_softnodesetup.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/utilitydialog.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/utilitydialog.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletframe.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletframe.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletmodel.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletmodel.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletmodeltransaction.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletmodeltransaction.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletview.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/walletview.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/winshutdownmonitor.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/qt/winshutdownmonitor.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/random.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/random.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rest.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/reverselock.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/blockchain.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/client.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/client.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/mining.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/misc.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/net.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/protocol.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/protocol.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/rawtransaction.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/register.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/server.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/rpc/server.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/scheduler.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/scheduler.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/interpreter.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/interpreter.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/ismine.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/ismine.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/script.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/script.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/script_error.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/script_error.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/sigcache.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/sigcache.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/sign.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/sign.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/softcoinconsensus.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/softcoinconsensus.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/standard.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/script/standard.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/contrib/lax_der_parsing.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/contrib/lax_der_parsing.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/contrib/lax_der_privatekey_parsing.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/contrib/lax_der_privatekey_parsing.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/include/secp256k1.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/include/secp256k1_ecdh.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/include/secp256k1_recovery.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/include/secp256k1_schnorr.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/basic-config.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_ecdh.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_internal.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_recover.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_schnorr_verify.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_sign.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/bench_verify.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecdsa.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecdsa_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/eckey.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/eckey_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult_const.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult_const_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult_gen.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult_gen_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/ecmult_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_10x26.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_10x26_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_5x52.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_5x52_asm_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_5x52_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_5x52_int128_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/field_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/gen_context.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/group.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/group_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/hash.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/hash_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/java/org_softcoin_NativeSecp256k1.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/java/org_softcoin_NativeSecp256k1.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/ecdh/main_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/ecdh/tests_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/recovery/main_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/recovery/tests_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/schnorr/main_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/schnorr/schnorr.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/schnorr/schnorr_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/modules/schnorr/tests_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/num.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/num_gmp.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/num_gmp_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/num_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar_4x64.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar_4x64_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar_8x32.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar_8x32_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/scalar_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/secp256k1.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/testrand.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/testrand_impl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/tests.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/secp256k1/src/util.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/serialize.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/shavite.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/simd.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/skein.c">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/softcoin-cli.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/softcoin-tx.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/softcoind.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/spentindex.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_blake.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_bmw.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_cubehash.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_echo.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_fugue.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_groestl.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_hamsi.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_jh.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_keccak.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_luffa.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_shavite.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_simd.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_skein.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sph_types.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/streams.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/allocators/secure.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/allocators/zeroafterfree.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/cleanse.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/cleanse.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/pagelocker.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/support/pagelocker.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sync.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/sync.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/Checkpoints_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/DoS_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/addrman_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/allocator_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/amount_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/arith_uint256_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/base32_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/base58_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/base64_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/bip32_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/blockencodings_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/bloom_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/coins_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/compress_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/crypto_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/dbwrapper_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/getarg_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/hash_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/key_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/limitedmap_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/main_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/mempool_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/merkle_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/miner_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/multisig_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/net_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/netbase_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/pmt_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/policyestimator_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/pow_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/prevector_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/reverselock_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/rpc_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/sanity_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/scheduler_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/script_P2PKH_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/script_P2SH_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/script_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/scriptnum10.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/scriptnum_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/serialize_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/sighash_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/sigopcount_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/skiplist_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/streams_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/test_softcoin.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/test_softcoin.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/testutil.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/testutil.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/timedata_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/transaction_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/txvalidationcache_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/uint256_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/univalue_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/util_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/test/versionbits_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/threadsafety.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/timedata.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/timedata.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/timestampindex.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/tinyformat.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/torcontrol.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/torcontrol.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/txdb.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/txdb.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/txmempool.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/txmempool.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/ui_interface.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/ui_interface.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/uint256.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/uint256.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/undo.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/gen/gen.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/include/univalue.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/lib/univalue.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/lib/univalue_escapes.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/lib/univalue_read.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/lib/univalue_utffilter.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/lib/univalue_write.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/univalue/test/unitester.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/util.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/util.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utilmoneystr.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utilmoneystr.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utils/dns_utils.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utils/dns_utils.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utilstrencodings.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utilstrencodings.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utiltime.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/utiltime.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/validationinterface.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/validationinterface.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/version.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/versionbits.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/versionbits.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/crypter.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/crypter.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/db.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/db.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/rpcdump.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/rpcwallet.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/rpcwallet.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/softnode.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/softnode.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/accounting_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/crypto_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/rpc_wallet_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/wallet_test_fixture.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/wallet_test_fixture.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/test/wallet_tests.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/wallet.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/wallet.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/walletdb.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/wallet/walletdb.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqabstractnotifier.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqabstractnotifier.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqconfig.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqnotificationinterface.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqnotificationinterface.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqpublishnotifier.cpp">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/src/zmq/zmqpublishnotifier.h">
+			<Option target="fusion_core"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Sql/Qt5SqlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Xml/Qt5XmlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5LinguistTools\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5LinguistTools\"/>
+		</Unit>
+		<Unit filename="/home/carlo/org/software/softcoin/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5LinguistTools\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,9 +1,9 @@
-// Copyright (c) 2017 The NavCoin Core developers
+// Copyright (c) 2017 The SoftCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_CFUND_H
-#define NAVCOIN_CFUND_H
+#ifndef SOFTCOIN_CFUND_H
+#define SOFTCOIN_CFUND_H
 
 #include "amount.h"
 #include "net.h"
@@ -251,4 +251,4 @@ public:
 
 }
 
-#endif // NAVCOIN_CFUND_H
+#endif // SOFTCOIN_CFUND_H

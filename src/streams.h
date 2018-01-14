@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_STREAMS_H
-#define NAVCOIN_STREAMS_H
+#ifndef SOFTCOIN_STREAMS_H
+#define SOFTCOIN_STREAMS_H
 
 #include "support/allocators/zeroafterfree.h"
 #include "serialize.h"
@@ -641,4 +641,4 @@ public:
     }
 };
 
-#endif // NAVCOIN_STREAMS_H
+#endif // SOFTCOIN_STREAMS_H

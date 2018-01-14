@@ -1,0 +1,6 @@
+/home/carlo/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4127.32/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/carlo/org/software/softcoin
+-- Debug build
+Qt Found OK
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/carlo/org/software/softcoin/cmake-build-debug

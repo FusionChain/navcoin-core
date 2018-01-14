@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_WALLETFRAME_H
-#define NAVCOIN_QT_WALLETFRAME_H
+#ifndef SOFTCOIN_QT_WALLETFRAME_H
+#define SOFTCOIN_QT_WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
@@ -11,7 +11,7 @@
 #include <QPushButton>
 
 
-class NavCoinGUI;
+class SoftCoinGUI;
 class ClientModel;
 class PlatformStyle;
 class SendCoinsRecipient;
@@ -27,7 +27,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, NavCoinGUI *_gui = 0);
+    explicit WalletFrame(const PlatformStyle *platformStyle, SoftCoinGUI *_gui = 0);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -46,7 +46,7 @@ public:
 
 private:
     QStackedWidget *walletStack;
-    NavCoinGUI *gui;
+    SoftCoinGUI *gui;
     ClientModel *clientModel;
     QMap<QString, WalletView*> mapWalletViews;
 
@@ -111,4 +111,4 @@ public Q_SLOTS:
 
 };
 
-#endif // NAVCOIN_QT_WALLETFRAME_H
+#endif // SOFTCOIN_QT_WALLETFRAME_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_COINCONTROL_H
-#define NAVCOIN_COINCONTROL_H
+#ifndef SOFTCOIN_COINCONTROL_H
+#define SOFTCOIN_COINCONTROL_H
 
 #include "primitives/transaction.h"
 
@@ -73,4 +73,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // NAVCOIN_COINCONTROL_H
+#endif // SOFTCOIN_COINCONTROL_H

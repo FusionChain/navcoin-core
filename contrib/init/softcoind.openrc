@@ -1,0 +1,92 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/softcoin/.softcoin" ]; then
+	SOFTCOIND_DEFAULT_DATADIR="/var/lib/softcoin/.softcoin"
+else
+	SOFTCOIND_DEFAULT_DATADIR="/var/lib/softcoind"
+fi
+
+SOFTCOIND_CONFIGFILE=${SOFTCOIND_CONFIGFILE:-/etc/softcoin/softcoin.conf}
+SOFTCOIND_PIDDIR=${SOFTCOIND_PIDDIR:-/var/run/softcoind}
+SOFTCOIND_PIDFILE=${SOFTCOIND_PIDFILE:-${SOFTCOIND_PIDDIR}/softcoind.pid}
+SOFTCOIND_DATADIR=${SOFTCOIND_DATADIR:-${SOFTCOIND_DEFAULT_DATADIR}}
+SOFTCOIND_USER=${SOFTCOIND_USER:-${SOFTCOIN_USER:-softcoin}}
+SOFTCOIND_GROUP=${SOFTCOIND_GROUP:-softcoin}
+SOFTCOIND_BIN=${SOFTCOIND_BIN:-/usr/bin/softcoind}
+SOFTCOIND_NICE=${SOFTCOIND_NICE:-${NICELEVEL:-0}}
+SOFTCOIND_OPTS="${SOFTCOIND_OPTS:-${SOFTCOIN_OPTS}}"
+
+name="SoftCoin Core Daemon"
+description="SoftCoin cryptocurrency P2P network daemon"
+
+command="/usr/bin/softcoind"
+command_args="-pid=\"${SOFTCOIND_PIDFILE}\" \
+		-conf=\"${SOFTCOIND_CONFIGFILE}\" \
+		-datadir=\"${SOFTCOIND_DATADIR}\" \
+		-daemon \
+		${SOFTCOIND_OPTS}"
+
+required_files="${SOFTCOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${SOFTCOIND_USER} \
+			-N ${SOFTCOIND_NICE} -w 2000"
+pidfile="${SOFTCOIND_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${SOFTCOIND_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${SOFTCOIND_USER}:${SOFTCOIND_GROUP}" \
+	"${SOFTCOIND_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${SOFTCOIND_USER}:${SOFTCOIND_GROUP}" \
+	"${SOFTCOIND_PIDDIR}"
+
+	checkpath -f \
+	-o ${SOFTCOIND_USER}:${SOFTCOIND_GROUP} \
+	-m 0660 \
+	${SOFTCOIND_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${SOFTCOIND_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run softcoind."
+		eerror "The setting must appear in ${SOFTCOIND_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following"
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is also recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"SoftCoin Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

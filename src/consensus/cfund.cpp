@@ -1,4 +1,4 @@
-// Copyright (c) 2017 The NavCoin Core developers
+// Copyright (c) 2017 The SoftCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -192,9 +192,9 @@ bool CFund::IsValidPaymentRequest(CTransaction tx)
     if(!CFund::FindProposal(Hash, proposal) || proposal.fState != CFund::ACCEPTED)
         return false;
 
-    std::string Secret = "I kindly ask to withdraw " + std::to_string(nAmount) + "NAV from the proposal " + proposal.hash.ToString() + ". Payment request id: " + strDZeel;
+    std::string Secret = "I kindly ask to withdraw " + std::to_string(nAmount) + "SOFT from the proposal " + proposal.hash.ToString() + ". Payment request id: " + strDZeel;
 
-    CNavCoinAddress addr(proposal.Address);
+    CSoftCoinAddress addr(proposal.Address);
     CKeyID keyID;
     addr.GetKeyID(keyID);
 

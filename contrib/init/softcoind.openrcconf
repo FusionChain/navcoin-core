@@ -1,0 +1,33 @@
+# /etc/conf.d/softcoind: config file for /etc/init.d/softcoind
+
+# Config file location
+#SOFTCOIND_CONFIGFILE="/etc/softcoin/softcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $SOFTCOIND_USER)
+#SOFTCOIND_PIDDIR="/var/run/softcoind"
+
+# What filename to give the pidfile
+#SOFTCOIND_PIDFILE="${SOFTCOIND_PIDDIR}/softcoind.pid"
+
+# Where to write softcoind data (be mindful that the blockchain is large)
+#SOFTCOIND_DATADIR="/var/lib/softcoind"
+
+# User and group to own softcoind process
+#SOFTCOIND_USER="softcoin"
+#SOFTCOIND_GROUP="softcoin"
+
+# Path to softcoind executable
+#SOFTCOIND_BIN="/usr/bin/softcoind"
+
+# Nice value to run softcoind under
+#SOFTCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+SOFTCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for softcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+SOFTCOIND_SIGTERM_TIMEOUT=60

@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_CHAINPARAMSBASE_H
-#define NAVCOIN_CHAINPARAMSBASE_H
+#ifndef SOFTCOIN_CHAINPARAMSBASE_H
+#define SOFTCOIN_CHAINPARAMSBASE_H
 
 #include <string>
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between navcoin-cli and navcoind)
- * of a given instance of the NavCoin system.
+ * CBaseChainParams defines the base parameters (shared between softcoin-cli and softcoind)
+ * of a given instance of the SoftCoin system.
  */
 class CBaseChainParams
 {
@@ -59,4 +59,4 @@ std::string ChainNameFromCommandLine();
  */
 bool AreBaseParamsConfigured();
 
-#endif // NAVCOIN_CHAINPARAMSBASE_H
+#endif // SOFTCOIN_CHAINPARAMSBASE_H

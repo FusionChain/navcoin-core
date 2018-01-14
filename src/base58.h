@@ -11,8 +11,8 @@
  * - E-mail usually won't line-break if there's no punctuation to break at.
  * - Double-clicking selects the whole string as one word if it's all alphanumeric.
  */
-#ifndef NAVCOIN_BASE58_H
-#define NAVCOIN_BASE58_H
+#ifndef SOFTCOIN_BASE58_H
+#define SOFTCOIN_BASE58_H
 
 #include "chainparams.h"
 #include "key.h"
@@ -95,13 +95,13 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded NavCoin addresses.
+/** base58-encoded SoftCoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CNavCoinAddress : public CBase58Data {
+class CSoftCoinAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
@@ -109,10 +109,10 @@ public:
     bool IsValid() const;
     bool IsValid(const CChainParams &params) const;
 
-    CNavCoinAddress() {}
-    CNavCoinAddress(const CTxDestination &dest) { Set(dest); }
-    CNavCoinAddress(const std::string& strAddress) { SetString(strAddress); }
-    CNavCoinAddress(const char* pszAddress) { SetString(pszAddress); }
+    CSoftCoinAddress() {}
+    CSoftCoinAddress(const CTxDestination &dest) { Set(dest); }
+    CSoftCoinAddress(const std::string& strAddress) { SetString(strAddress); }
+    CSoftCoinAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -123,7 +123,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CNavCoinSecret : public CBase58Data
+class CSoftCoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -132,11 +132,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CNavCoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CNavCoinSecret() {}
+    CSoftCoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CSoftCoinSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CNavCoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CSoftCoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -154,18 +154,18 @@ public:
         return ret;
     }
 
-    CNavCoinExtKeyBase(const K &key) {
+    CSoftCoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CNavCoinExtKeyBase(const std::string& strBase58c) {
+    CSoftCoinExtKeyBase(const std::string& strBase58c) {
         SetString(strBase58c.c_str(), Params().Base58Prefix(Type).size());
     }
 
-    CNavCoinExtKeyBase() {}
+    CSoftCoinExtKeyBase() {}
 };
 
-typedef CNavCoinExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CNavCoinExtKey;
-typedef CNavCoinExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CNavCoinExtPubKey;
+typedef CSoftCoinExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CSoftCoinExtKey;
+typedef CSoftCoinExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CSoftCoinExtPubKey;
 
-#endif // NAVCOIN_BASE58_H
+#endif // SOFTCOIN_BASE58_H

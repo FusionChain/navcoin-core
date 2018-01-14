@@ -14,29 +14,29 @@ else
 LIBUNIVALUE = $(UNIVALUE_LIBS)
 endif
 
-NAVCOIN_CONFIG_INCLUDES=-I$(builddir)/config
-NAVCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
+SOFTCOIN_CONFIG_INCLUDES=-I$(builddir)/config
+SOFTCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
-NAVCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
-NAVCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
+SOFTCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
+SOFTCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBNAVCOIN_SERVER=libnavcoin_server.a
-LIBNAVCOIN_COMMON=libnavcoin_common.a
-LIBNAVCOIN_CONSENSUS=libnavcoin_consensus.a
-LIBNAVCOIN_CLI=libnavcoin_cli.a
-LIBNAVCOIN_UTIL=libnavcoin_util.a
-LIBNAVCOIN_CRYPTO=crypto/libnavcoin_crypto.a
-LIBNAVCOINQT=qt/libnavcoinqt.a
+LIBSOFTCOIN_SERVER=libsoftcoin_server.a
+LIBSOFTCOIN_COMMON=libsoftcoin_common.a
+LIBSOFTCOIN_CONSENSUS=libsoftcoin_consensus.a
+LIBSOFTCOIN_CLI=libsoftcoin_cli.a
+LIBSOFTCOIN_UTIL=libsoftcoin_util.a
+LIBSOFTCOIN_CRYPTO=crypto/libsoftcoin_crypto.a
+LIBSOFTCOINQT=qt/libsoftcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBNAVCOIN_ZMQ=libnavcoin_zmq.a
+LIBSOFTCOIN_ZMQ=libsoftcoin_zmq.a
 endif
-if BUILD_NAVCOIN_LIBS
-LIBNAVCOINCONSENSUS=libnavcoinconsensus.la
+if BUILD_SOFTCOIN_LIBS
+LIBSOFTCOINCONSENSUS=libsoftcoinconsensus.la
 endif
 if ENABLE_WALLET
-LIBNAVCOIN_WALLET=libnavcoin_wallet.a
+LIBSOFTCOIN_WALLET=libsoftcoin_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -45,32 +45,32 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBNAVCOIN_CRYPTO) \
-  $(LIBNAVCOIN_UTIL) \
-  $(LIBNAVCOIN_COMMON) \
-  $(LIBNAVCOIN_CONSENSUS) \
-  $(LIBNAVCOIN_SERVER) \
-  $(LIBNAVCOIN_CLI) \
-  $(LIBNAVCOIN_WALLET) \
-  $(LIBNAVCOIN_ZMQ)
+  $(LIBSOFTCOIN_CRYPTO) \
+  $(LIBSOFTCOIN_UTIL) \
+  $(LIBSOFTCOIN_COMMON) \
+  $(LIBSOFTCOIN_CONSENSUS) \
+  $(LIBSOFTCOIN_SERVER) \
+  $(LIBSOFTCOIN_CLI) \
+  $(LIBSOFTCOIN_WALLET) \
+  $(LIBSOFTCOIN_ZMQ)
 
-lib_LTLIBRARIES = $(LIBNAVCOINCONSENSUS)
+lib_LTLIBRARIES = $(LIBSOFTCOINCONSENSUS)
 
 bin_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-if BUILD_NAVCOIND
-  bin_PROGRAMS += navcoind
+if BUILD_SOFTCOIND
+  bin_PROGRAMS += softcoind
 endif
 
-if BUILD_NAVCOIN_UTILS
-  bin_PROGRAMS += navcoin-cli navcoin-tx
+if BUILD_SOFTCOIN_UTILS
+  bin_PROGRAMS += softcoin-cli softcoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# navcoin core #
-NAVCOIN_CORE_H = \
+# softcoin core #
+SOFTCOIN_CORE_H = \
   addressindex.h \
   spentindex.h \
   timestampindex.h \
@@ -151,7 +151,7 @@ NAVCOIN_CORE_H = \
   versionbits.h \
   wallet/crypter.h \
   wallet/db.h \
-  wallet/navtech.h \
+  wallet/softnode.h \
   wallet/rpcwallet.h \
   wallet/wallet.h \
   wallet/walletdb.h \
@@ -165,12 +165,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libnavcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libsoftcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between navcoind and navcoin-qt
-libnavcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libnavcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_server_a_SOURCES = \
+# server: shared between softcoind and softcoin-qt
+libsoftcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libsoftcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_server_a_SOURCES = \
   addrman.cpp \
   bloom.cpp \
   blockencodings.cpp \
@@ -208,38 +208,38 @@ libnavcoin_server_a_SOURCES = \
   utils/dns_utils.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(NAVCOIN_CORE_H)
+  $(SOFTCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libnavcoin_zmq_a_CPPFLAGS = $(NAVCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libnavcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_zmq_a_SOURCES = \
+libsoftcoin_zmq_a_CPPFLAGS = $(SOFTCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libsoftcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
 endif
 
 
-# wallet: shared between navcoind and navcoin-qt, but only linked
+# wallet: shared between softcoind and softcoin-qt, but only linked
 # when wallet enabled
-libnavcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-libnavcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_wallet_a_SOURCES = \
+libsoftcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+libsoftcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_wallet_a_SOURCES = \
   consensus/cfund.cpp \
   wallet/crypter.cpp \
   wallet/db.cpp \
-  wallet/navtech.cpp \
+  wallet/softnode.cpp \
   wallet/rpcdump.cpp \
   wallet/rpcwallet.cpp \
   wallet/wallet.cpp \
   wallet/walletdb.cpp \
   policy/rbf.cpp \
-  $(NAVCOIN_CORE_H)
+  $(SOFTCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libnavcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_CONFIG_INCLUDES)
-crypto_libnavcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libnavcoin_crypto_a_SOURCES = \
+crypto_libsoftcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_CONFIG_INCLUDES)
+crypto_libsoftcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libsoftcoin_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -257,9 +257,9 @@ crypto_libnavcoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libnavcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-libnavcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_consensus_a_SOURCES = \
+libsoftcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+libsoftcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -306,7 +306,7 @@ libnavcoin_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/navcoinconsensus.cpp \
+  script/softcoinconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -322,10 +322,10 @@ libnavcoin_consensus_a_SOURCES = \
   version.h
 
 
-# common: shared between navcoind, and navcoin-qt and non-server tools
-libnavcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-libnavcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_common_a_SOURCES = \
+# common: shared between softcoind, and softcoin-qt and non-server tools
+libsoftcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+libsoftcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_common_a_SOURCES = \
   amount.cpp \
   base58.cpp \
   chainparams.cpp \
@@ -340,14 +340,14 @@ libnavcoin_common_a_SOURCES = \
   scheduler.cpp \
   script/sign.cpp \
   script/standard.cpp \
-  $(NAVCOIN_CORE_H)
+  $(SOFTCOIN_CORE_H)
 
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libnavcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-libnavcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_util_a_SOURCES = \
+libsoftcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+libsoftcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_util_a_SOURCES = \
   support/pagelocker.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -362,100 +362,100 @@ libnavcoin_util_a_SOURCES = \
   utilmoneystr.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
-  $(NAVCOIN_CORE_H)
+  $(SOFTCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libnavcoin_util_a_SOURCES += compat/glibc_compat.cpp
+libsoftcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between navcoin-cli and navcoin-qt
-libnavcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-libnavcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_cli_a_SOURCES = \
+# cli: shared between softcoin-cli and softcoin-qt
+libsoftcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+libsoftcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoin_cli_a_SOURCES = \
   rpc/client.cpp \
-  $(NAVCOIN_CORE_H)
+  $(SOFTCOIN_CORE_H)
 
-nodist_libnavcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libsoftcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# navcoind binary #
-navcoind_SOURCES = navcoind.cpp
-navcoind_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-navcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-navcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# softcoind binary #
+softcoind_SOURCES = softcoind.cpp
+softcoind_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+softcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+softcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-navcoind_SOURCES += navcoind-res.rc
+softcoind_SOURCES += softcoind-res.rc
 endif
 
-navcoind_LDADD = \
-  $(LIBNAVCOIN_SERVER) \
-  $(LIBNAVCOIN_COMMON) \
+softcoind_LDADD = \
+  $(LIBSOFTCOIN_SERVER) \
+  $(LIBSOFTCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBNAVCOIN_UTIL) \
-  $(LIBNAVCOIN_WALLET) \
-  $(LIBNAVCOIN_ZMQ) \
-  $(LIBNAVCOIN_CONSENSUS) \
-  $(LIBNAVCOIN_CRYPTO) \
+  $(LIBSOFTCOIN_UTIL) \
+  $(LIBSOFTCOIN_WALLET) \
+  $(LIBSOFTCOIN_ZMQ) \
+  $(LIBSOFTCOIN_CONSENSUS) \
+  $(LIBSOFTCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-navcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(UNBOUND_LIBS) $(CURL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+softcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(UNBOUND_LIBS) $(CURL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# navcoin-cli binary #
-navcoin_cli_SOURCES = navcoin-cli.cpp
-navcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES) $(EVENT_CFLAGS)
-navcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-navcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# softcoin-cli binary #
+softcoin_cli_SOURCES = softcoin-cli.cpp
+softcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES) $(EVENT_CFLAGS)
+softcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+softcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-navcoin_cli_SOURCES += navcoin-cli-res.rc
+softcoin_cli_SOURCES += softcoin-cli-res.rc
 endif
 
-navcoin_cli_LDADD = \
-  $(LIBNAVCOIN_CLI) \
+softcoin_cli_LDADD = \
+  $(LIBSOFTCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBNAVCOIN_UTIL) \
-  $(LIBNAVCOIN_CRYPTO)
+  $(LIBSOFTCOIN_UTIL) \
+  $(LIBSOFTCOIN_CRYPTO)
 
-navcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(UNBOUND_LIBS) $(CURL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+softcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(UNBOUND_LIBS) $(CURL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# navcoin-tx binary #
-navcoin_tx_SOURCES = navcoin-tx.cpp
-navcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
-navcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-navcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# softcoin-tx binary #
+softcoin_tx_SOURCES = softcoin-tx.cpp
+softcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(SOFTCOIN_INCLUDES)
+softcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+softcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-navcoin_tx_SOURCES += navcoin-tx-res.rc
+softcoin_tx_SOURCES += softcoin-tx-res.rc
 endif
 
-navcoin_tx_LDADD = \
+softcoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBNAVCOIN_COMMON) \
-  $(LIBNAVCOIN_UTIL) \
-  $(LIBNAVCOIN_CONSENSUS) \
-  $(LIBNAVCOIN_CRYPTO) \
+  $(LIBSOFTCOIN_COMMON) \
+  $(LIBSOFTCOIN_UTIL) \
+  $(LIBSOFTCOIN_CONSENSUS) \
+  $(LIBSOFTCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-navcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+softcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# navcoinconsensus library #
-if BUILD_NAVCOIN_LIBS
-include_HEADERS = script/navcoinconsensus.h
-libnavcoinconsensus_la_SOURCES = $(crypto_libnavcoin_crypto_a_SOURCES) $(libnavcoin_consensus_a_SOURCES)
+# softcoinconsensus library #
+if BUILD_SOFTCOIN_LIBS
+include_HEADERS = script/softcoinconsensus.h
+libsoftcoinconsensus_la_SOURCES = $(crypto_libsoftcoin_crypto_a_SOURCES) $(libsoftcoin_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libnavcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libsoftcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libnavcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libnavcoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libnavcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_NAVCOIN_INTERNAL
-libnavcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsoftcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libsoftcoinconsensus_la_LIBADD = $(LIBSECP256K1)
+libsoftcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_SOFTCOIN_INTERNAL
+libsoftcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

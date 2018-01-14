@@ -1,10 +1,10 @@
-![alt text](https://raw.githubusercontent.com/navcoindev/navcoin-media/master/logo/logo-extended.png "Logo text 2")
+![alt text](https://raw.githubusercontent.com/softcoindev/softcoin-media/master/logo/logo-extended.png "Logo text 2")
 
-This is the working repository for NAV Coin 4.0.6, our fork of bitcoin-core 0.13.
+This is the working repository for SOFT Coin 4.0.6, our fork of bitcoin-core 0.13.
 
 For more information please visit the website:
 
-https://navcoin.org/project-roadmap/
+https://softwarechain.org/project-roadmap/
 
 ## Coin Specifications
 
@@ -31,9 +31,9 @@ https://navcoin.org/project-roadmap/
 | Site | link |
 |:-----------|:-----------|
 | Bitcointalk | https://bitcointalk.org/index.php?topic=679791 |
-| Facebook | https://www.facebook.com/NAVCoin |
-| Twitter | https://twitter.com/NavCoin |
-| Reddit | http://www.reddit.com/r/navcoin |
-| Slack | https://navcoin-sign-up.herokuapp.com |
-| Telegram | https://t.me/navcoin |
+| Facebook | https://www.facebook.com/SOFTCoin |
+| Twitter | https://twitter.com/SoftCoin |
+| Reddit | http://www.reddit.com/r/softcoin |
+| Slack | https://softcoin-sign-up.herokuapp.com |
+| Telegram | https://t.me/softcoin |
 | Discord | https://discord.gg/y4Vu9jw |

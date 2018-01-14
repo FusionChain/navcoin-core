@@ -1,4 +1,4 @@
-package org.navcoin;
+package org.softcoin;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

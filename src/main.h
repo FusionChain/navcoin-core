@@ -1,14 +1,14 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2017 The NavCoin Core developers
+// Copyright (c) 2017 The SoftCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_MAIN_H
-#define NAVCOIN_MAIN_H
+#ifndef SOFTCOIN_MAIN_H
+#define SOFTCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/navcoin-config.h"
+#include "config/softcoin-config.h"
 #endif
 
 #include "amount.h"
@@ -530,7 +530,7 @@ bool InvalidateBlock(CValidationState& state, const CChainParams& chainparams, C
 /** Remove invalidity status from a block and its descendants. */
 bool ResetBlockFailureFlags(CBlockIndex *pindex);
 
-// NAVCoin
+// SOFTCoin
 
 inline unsigned int GetTargetSpacing(int nHeight) { return 30; }
 
@@ -620,4 +620,4 @@ bool CountVotes(CValidationState& state, CBlockIndex *pindexNew, const CBlock* p
 
 bool IsSigHFEnabled(const Consensus::Params &consensus, const CBlockIndex *pindexPrev);
 
-#endif // NAVCOIN_MAIN_H
+#endif // SOFTCOIN_MAIN_H

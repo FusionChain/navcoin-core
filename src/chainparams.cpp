@@ -27,7 +27,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     // txNew.vout[0].scriptPubKey.clear();
     txNew.vout[0].nValue = genesisReward;
     txNew.vout[0].scriptPubKey.clear();
-    txNew.strDZeel = "NavCoin genesis block";
+    txNew.strDZeel = "SoftCoin genesis block";
 
     CBlock genesis;
     genesis.nTime    = nTime;
@@ -152,7 +152,7 @@ public:
 
         genesis = CreateGenesisBlock(1460561040, 6945, 0x1f00ffff, 1, 0);
 
-	      consensus.hashGenesisBlock = genesis.GetHash();
+        consensus.hashGenesisBlock = genesis.GetHash();
 
         assert(consensus.hashGenesisBlock == uint256S("0x00006a4e3e18c71c6d48ad6c261e2254fa764cf29607a4357c99b712dfbb8e6a"));
         assert(genesis.hashMerkleRoot == uint256S("0xc507eec6ccabfd5432d764afceafba42d2d946594b8a60570cb2358a7392c61a"));
@@ -166,11 +166,11 @@ public:
         vFixedSeeds.clear();
       	vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("supernode.navcoin.org", "95.183.51.56"));
-        vSeeds.push_back(CDNSSeedData("navtech1.navcoin.org", "95.183.52.55"));
-        vSeeds.push_back(CDNSSeedData("navtech2.navcoin.org", "95.183.52.28"));
-        vSeeds.push_back(CDNSSeedData("navtech3.navcoin.org", "95.183.52.29"));
-        vSeeds.push_back(CDNSSeedData("navtech4.navcoin.org", "95.183.53.184"));
+        vSeeds.push_back(CDNSSeedData("supernode.softwarechain.org", "95.183.51.56"));
+        vSeeds.push_back(CDNSSeedData("softnode1.softwarechain.org", "95.183.52.55"));
+        vSeeds.push_back(CDNSSeedData("softnode2.softwarechain.org", "95.183.52.28"));
+        vSeeds.push_back(CDNSSeedData("softnode3.softwarechain.org", "95.183.52.29"));
+        vSeeds.push_back(CDNSSeedData("softnode4.softwarechain.org", "95.183.53.184"));
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
