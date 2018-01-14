@@ -28,7 +28,7 @@ https://softwarechain.org/project-roadmap/
 
 | Site | link |
 |:-----------|:-----------|
-| Bitcointalk | https://bitcointalk.org/index.php?topic=679791 |
+| Bitcointalk | https://bitcointalk.org/index.php?topic=2752882.0 |
 | Facebook | https://www.facebook.com/SOFTCoin |
 | Twitter | https://twitter.com/SoftCoin |
 | Reddit | http://www.reddit.com/r/softcoin |
