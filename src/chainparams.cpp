@@ -16,6 +16,7 @@
 #include <boost/assign/list_of.hpp>
 
 #include "chainparamsseeds.h"
+#include "bignum.h"
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -150,12 +151,12 @@ public:
         nPruneAfterHeight = 100000;
         bnProofOfWorkLimit = arith_uint256(~arith_uint256() >> 16);
 
-        genesis = CreateGenesisBlock(1515971290, 6945, 0x1f00ffff, 1, 0);
+        genesis = CreateGenesisBlock(1515976290, 13999, 0x1f00ffff, 1, 0);
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00006a4e3e18c71c6d48ad6c261e1337ae256cf29607a4769c99b712dfbb8e6a"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc507eec6ccabfd1337d764afceafba42d2d946594b8a60570cb2358a4769c61a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00003ef8bdc61ddd4d94f7a71e17c485c71c06b5599381707ca14adc308232c1"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd1dfd7c36a7f7d10bfda5c2d4c001233597cdfaf00652d4cd4b164061a63e1da"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,53);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
@@ -182,7 +183,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x00006a4e3e18c71c6d48ad6c261e1337ae256cf29607a4769c99b712dfbb8e6a")),
+            ( 0, uint256S("0x00003ef8bdc61ddd4d94f7a71e17c485c71c06b5599381707ca14adc308232c1")),
             0,   // * UNIX timestamp of last checkpoint block
             0,   // * total number of transactions between genesis and last checkpoint
                  //   (the tx=... number in the SetBestChain debug.log lines)
@@ -262,12 +263,12 @@ public:
         nPruneAfterHeight = 1000;
         bnProofOfWorkLimit = arith_uint256(~arith_uint256() >> 16);
 
-        genesis = CreateGenesisBlockTestnet(1515971291, 2042989216, 0x1d00ffff, 1, 0);
+        genesis = CreateGenesisBlockTestnet(1515977320, 51271, 0x1d00ffff, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        uint256 hashGenesisBlock = uint256S("0x00005befdaad021b13378f748a81abcf3cdaedfedg8f08a09bf62391cb70f2e2");
+        uint256 hashGenesisBlock = uint256S("0x00005ca657618f6e1db9e0d4c50b6d97c212f990e13052c939f4b888a587c3e9");
 
-        if (true && (genesis.GetHash() != hashGenesisBlock || genesis.hashMerkleRoot != uint256S("0x476968bc7686c2f3e852eb12ab1337c9f2b2848f13ad7f7b848eef70c3f86fdd")))
+        if (true && (genesis.GetHash() != hashGenesisBlock || genesis.hashMerkleRoot != uint256S("0x872a61a8f21d8bc4a2cf86aac09e3201e85cdabf59471839ad88950cafdca186")))
         {
             printf("recalculating params for testnet.\n");
             printf("old testnet genesis nonce: %d\n", genesis.nNonce);
@@ -282,8 +283,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00005befdaad021b13378f748a81abcf3cdaedfedg8f08a09bf62391cb70f2e2"));
-        assert(genesis.hashMerkleRoot == uint256S("0x476968bc7686c2f3e852eb12ab1337c9f2b2848f13ad7f7b848eef70c3f86fdd"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00005ca657618f6e1db9e0d4c50b6d97c212f990e13052c939f4b888a587c3e9"));
+        assert(genesis.hashMerkleRoot == uint256S("0x872a61a8f21d8bc4a2cf86aac09e3201e85cdabf59471839ad88950cafdca186"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,54);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,86);
@@ -301,7 +302,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x1")),
+            ( 0, uint256S("0x00005ca657618f6e1db9e0d4c50b6d97c212f990e13052c939f4b888a587c3e9")),
             1511009849, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
@@ -367,7 +368,7 @@ public:
         nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1515971292, 2042883868, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1515977320, 51271, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
 
         // Need to be reviewed
@@ -386,7 +387,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x0000000013cb675cc890cf8c8d15f4f3258846a286ecd2553d6e203e00198ae0")),
+            ( 0, uint256S("0x00005ca657618f6e1db9e0d4c50b6d97c212f990e13052c939f4b888a587c3e9")),
             0,
             0,
             0
